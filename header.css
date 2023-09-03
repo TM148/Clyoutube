@@ -1,0 +1,261 @@
+/* * {
+box-sizing: border-box;
+} */
+
+.header {
+  height: 67px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  z-index: 200;
+  flex-basis: 0;
+} 
+
+.lsec {
+  height: 50px;
+  margin-right: 75px;
+  align-items: center;
+  display: flex;
+}
+
+
+.msec {
+flex: 1;
+max-width: 745px; 
+min-width: 40px;
+display: flex;
+align-items: center;
+height: 50px;
+min-width: 0;
+}
+
+
+.rsec {
+  width: 165px;
+  min-width: 50px;
+  margin-left: 72px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  justify-content: space-between;
+}
+
+.menu {
+height: 15px;
+margin-left: 25px;
+margin-right: 25px;
+cursor: pointer;
+transition: background-color .15s, border-radius .15s;
+padding: 10px;
+}
+
+.menu:hover {
+  background-color: rgb(0, 0, 0);
+  border-radius: 25px;
+  border: none;
+}
+
+.ytlogo {
+  height: 72px;
+  cursor: pointer;
+}
+
+
+.searchbutton {
+  height: 30px;
+  width: 32px;
+}
+
+.voicebutton {
+  height: 40px;
+  width: 30.5px;
+}
+
+
+.search-bar {
+  background-color: black;
+  flex: 1;
+  border-radius: 22px 0 0 0; 
+  height:37px;
+  color: rgb(255, 255, 255);
+  border-width: 1px 1px 1px 1px;
+  border-color: rgb(55, 55, 55);
+  border-style: solid;
+  padding-left: 15px;
+  font-size: 16px;
+  min-width: 0px;
+  }
+
+  @media (max-width: 660px) {
+    .search-bar {
+      margin-top: 1000px;
+    }
+
+  }
+
+.search-bar::placeholder {
+  font-family: roboto,arial;
+ }
+
+ .search-bar:active {
+  border-color: blue;
+ }
+
+.voicehov {
+  background-color: rgb(45, 45, 45);
+  border-radius: 22px;
+  transition: background-color .15s;
+  border: none;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+
+.voicehov:hover {
+  background-color: rgb(113, 113, 113);
+}
+
+
+.addicon {
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border:none;
+  width: 21px;
+  cursor: pointer;
+  transition: background-color .15s;
+}
+
+.addicon:hover {
+  background-color: rgb(55, 55, 55); 
+  border-radius: 10px; 
+}
+
+
+.bellicon {
+ width: 27px;
+ border: none;
+ padding-left: 7px;
+ padding-right: 7px;
+ padding-top: 9px;
+ padding-bottom: 9px;
+ cursor: pointer;
+ transition: background-color .15s;
+
+}
+
+.bellicon:hover {
+  background-color: rgb(55, 55, 55);
+  border-radius: 10px;
+}
+
+
+.pfp {
+  width: 31px;
+  border-radius: 15px;
+  margin-right: 35px;
+  cursor: pointer;
+}
+
+
+.notifs{
+  position: relative;
+}
+
+.notifcount{
+  position: absolute;
+  top: 4px;
+  right: 1px;
+  border-radius: 11px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 12px;
+  color: white;
+  background-color: rgb(204, 0, 0);
+  font-family: roboto, arial;
+}
+
+.searchbuttonstyle {
+  border-width: 1px 1px 1px 0; 
+  border-radius: 0 0 22px 0; 
+  border-style: solid;
+  border-color: rgb(55, 55, 55); 
+  background-color: rgb(45, 45, 45);
+  margin-right: 20px; 
+  width: 60px; 
+  height: 41px; 
+  cursor:pointer;
+}
+
+@media (max-width: 660px) {
+
+
+  .searchbuttonstyle {
+    background-color: rgb(0, 0, 0);
+    border-color: black;
+    padding-left: 130px;
+  }
+
+  .voicehov {
+    background-color: black;
+    transition: background-color .15s;
+  }
+
+  .voicehov:hover {
+    background-color: rgb(55, 55, 55);
+  }
+
+  .msec {
+    flex: 0;
+    margin-right: 150px;
+  }
+}
+
+
+.searchbuttonstyle .tooltip,
+.voicehov .tooltip,
+.notifs .tooltip,
+.creation .tooltip {
+  background-color: rgb(90, 90, 90);
+  color: white;
+  position: absolute;
+  padding: 6px;
+  padding-top: 9px ;
+  padding-bottom: 9px;
+  border-radius: 3px;
+  font-size:12px ;
+  font-family: Roboto, arial;
+  bottom: -25px;
+  opacity: 0;
+  transition: opacity .15s;
+  white-space: nowrap;
+  bottom: -45px;
+}
+
+.searchbuttonstyle:hover .tooltip,
+.voicehov:hover .tooltip,
+.notifs:hover .tooltip,
+.creation:hover .tooltip{
+  opacity: .85;
+}
+
+
+.searchbuttonstyle, 
+.voicehov,
+.notifs,
+.creation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+}
+
+
